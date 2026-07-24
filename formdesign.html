@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+  <div class="registr">
+    <h2>Student Registration Form</h2>
+    <h4>(All Fields are required)</h4>
+    <form action="/server" method="get">
+        <fieldset>
+        <legend align="center">Personal Information</legend>
+        <label for="name"> Full Name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" maxlength="30" required> (Maximum 30 characters only)
+        <br><br>
+
+        <label>Register Number:</label>
+        <br>
+        <input type="text" id="regno" name="regno" placeholder="URK23CS001" pattern="URK23CS[0-9]{3}" required> (use pattern for matching regno URK23CS001 format)
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="sample@gmail.com" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" id="password" name="password" placeholder="************" required>
+        <br><br>
+
+        <label for="date">Date of Birth:</label>
+        <br>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <br>
+        <input type="number" id="age" name="age" min="17" max="21" required> (minimum 17 & maximum 21)
+        <br><br>
+
+        <label for="time">Preferred Time:</label>
+        <br>
+        <input type="time" id="time" name="time" required>
+        <br><br>        
+        </fieldset>
+        <fieldset>
+            <legend align="center">Academic Information</legend>
+            <label for="Dept">Department:</label>
+            <br>
+            <select name="department" required>
+                <option value="">--Select Department--</option>
+                <option value="CSE">CSE</option>
+                <option value="DS">DS</option>
+                <option value="AI&ML">AI&ML</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="Civil">Civil</option>
+            </select>
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <br>
+            <input type="radio" id="gender" name="gender" required> Male
+            <input type="radio" id="gender" name="gender"> Female
+            <input type="radio" id="gender" name="gender"> Other
+            <br><br>
+
+            <label for="skills">Skills:</label>
+            <br>
+            <input type="checkbox" id="HTML" name="skills[]" value="HTML"> HTML
+            <input type="checkbox" id="CSS" name="skills[]" value="CSS"> CSS
+            <input type="checkbox" id="JavaScript" name="skills[]" value="JavaScript"> JavaScript
+            <input type="checkbox" id="Python" name="skills[]" value="Python"> Python
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend align="center">Additional Information</legend>
+            <label for="file">Upload Resume:</label>
+            <br>
+            <input type="file" name="file" id="file"> 
+            <br><br>
+
+            <label for="url">Portfolio Website:</label>
+            <br>
+            <input type="url" name="url" id="url" placeholder="https://example.com">
+            <br><br>
+
+            <label for="color">Favorite Color:</label>
+            <br>
+            <input type="color" name="color" id="color">
+            <br><br>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+  </div>  
+
+</body>
+</html>
